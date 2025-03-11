@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css'])
 </head>
 <body class="font-sans bg-white text-gray-900">
 
@@ -15,6 +16,7 @@
                 <li><a href="/" class="hover:text-blue-600">Home</a></li>
                 <li><a href="/about" class="hover:text-blue-600">About</a></li>
                 <li class="ml-auto"><a href="/contact" class="hover:text-blue-600">Contact</a></li>
+                <li class="ml-auto"><a href="/items" class="hover:text-blue-600">MySql + Laravel</a></li>
             </ul>
         </div>
     </nav>
