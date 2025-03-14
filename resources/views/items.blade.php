@@ -35,8 +35,10 @@
             <!-- Add Item -->
             <form action="/store" method="POST" class="mb-4">
                 @csrf
-                <input type="text" name="name" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter item name" required>
-                <button type="submit" class="mt-2 px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800">Add Item</button>
+                <div class="flex gap-x-2">
+                    <input type="text" name="name" class="flex-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter item name" required>
+                    <button type="submit" class="px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800">Add Item</button>
+                </div> 
             </form>
 
             <!-- Display Items -->
@@ -51,19 +53,21 @@
                     @foreach ($items as $item)
                     <tr>
                         <td class="py-2 px-4 border">{{ $item->name }}</td>
-                        <td class="py-2 px-4 border flex space-x-2">
-                            <!-- Update Form -->
-                            <form action="/update/{{ $item->id }}" method="POST" class="flex">
-                                @csrf
-                                <input type="text" name="name" value="{{ $item->name }}" class="p-1 border rounded w-30" required>
-                                <button type="submit" class="ml-2 px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600">Update</button>
-                            </form>
-                            
-                            <!-- Delete Form -->
-                            <form action="/delete/{{ $item->id }}" method="POST">
-                                @csrf
-                                <button type="submit" class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">Delete</button>
-                            </form>
+                        <td class="py-2 px-4 border">
+                            <div class="flex space-x-2">
+                                <!-- Update Form -->
+                                <form action="/update/{{ $item->id }}" method="POST" class="flex">
+                                    @csrf
+                                    <input type="text" name="name" value="{{ $item->name }}" class="p-1 border rounded w-30" required>
+                                    <button type="submit" class="ml-2 px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600">Update</button>
+                                </form>
+
+                                <!-- Delete Form -->
+                                <form action="/delete/{{ $item->id }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">Delete</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                     @endforeach
