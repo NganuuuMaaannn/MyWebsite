@@ -32,8 +32,8 @@
             <h1 class="text-4xl font-bold text-gray-900 leading-snug">Hi, I'm <br> Sean Michael T. Doinog</h1>
             <p class="text-gray-600 mt-2">A 3rd year BSIT student in Holycross of Davao College.</p>
             <div class="mt-10 space-x-4">
-                <a href="https://www.facebook.com/system.out.print.sean" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"> Add me on Facebook </a>
-                <a href="https://www.youtube.com/@seandoinog" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-red-600 text-red-600 rounded-md hover:bg-red-600 hover:text-white"> Youtube Channel </a>
+                <a href="https://www.facebook.com/seanthesheepzxc" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"> Add me on Facebook </a>
+                <a href="/message" rel="noopener noreferrer" class="px-10 py-3 border border-red-600 text-red-600 rounded-md hover:bg-red-600 hover:text-white"> Message me... </a>
             </div>
         </div>
 
