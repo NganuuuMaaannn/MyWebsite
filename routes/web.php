@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\MessageController;
 
 Route::get('/', function () {
     return view('home');
@@ -24,7 +25,6 @@ Route::controller(ItemController::class)->group(function () {
     Route::post('/delete/{id}', 'destroy');
 });
 
-// Todo List Routes
 Route::get('/todolist', [TodoController::class, 'index'])->name('todolist');
 Route::post('/todolist', [TodoController::class, 'store'])->name('todolist.store');
 Route::put('/todolist/{id}', [TodoController::class, 'update'])->name('todolist.update');
@@ -34,3 +34,6 @@ Route::put('/todolist/{id}/complete', [TodoController::class, 'markAsCompleted']
 Route::put('/todolist/{id}/undo', [TodoController::class, 'undoTask'])->name('todolist.undo');
 
 Route::get('/completed-tasks', [TodoController::class, 'completedTasks'])->name('todolist.completed');
+
+Route::get('/message', [MessageController::class, 'showForm'])->name('message.form');
+Route::post('/message', [MessageController::class, 'store'])->name('message.store');
